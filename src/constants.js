@@ -1,6 +1,6 @@
 export const CITIES = [
     {
-        label: 'New York',
+        label: 'Nueva York',
     },
     {
         label: 'Barcelona',
@@ -12,12 +12,12 @@ export const CITIES = [
         label: 'Londres',
     },
     {
-        label: 'Sao Paulo',
+        label: 'São Paulo',
     }
 ];
 
 export  const CITIES_COORDS = {
-    'New York': {
+    'Nueva York': {
         latitude: 40.71427,
         longitude: -74.00597    
     },
