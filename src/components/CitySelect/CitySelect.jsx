@@ -6,7 +6,7 @@ import { Card, MenuItem, Select, useMediaQuery } from '@mui/material';
 const CitySelect = (props) => {
   const { handleSelect, handleReset, options } = props;
 
-  const isMobile = useMediaQuery((theme) => theme.breakpoints.up('sm'), {
+  const isMobile = useMediaQuery((theme) => theme?.breakpoints.up('sm'), {
     noSsr: true,
   });
 
@@ -28,7 +28,7 @@ const CitySelect = (props) => {
         onChange={(e) => handleSelect(e)}
         size="big"
       >
-        <MenuItem value="Tu ubicación" onClick={handleReset}>
+        <MenuItem value="Tu ubicación" onClick={(e) => handleReset(e)}>
           Tu ubicación
         </MenuItem>
         {options?.map((opt, key) => (

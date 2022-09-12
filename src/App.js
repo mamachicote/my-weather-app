@@ -20,7 +20,7 @@ const App = () => {
   const [extendedWeather, setExtendedWeather] = useState(null);
 
   const getLocation = () => {
-    navigator.geolocation.getCurrentPosition(function (position) {
+    navigator?.geolocation?.getCurrentPosition(function (position) {
       setCoords(position.coords);
     });
   };
@@ -28,7 +28,7 @@ const App = () => {
   const getThemeByTime = () => {
     const date = new Date();
 
-    const time = date.getHours();
+    const time = date?.getHours();
 
     if (time > 18) {
       return 'dark';
@@ -56,18 +56,20 @@ const App = () => {
   }, []);
 
   useEffect(() => {
-    getCurrentWeather(
-      coords?.latitude,
-      coords?.longitude,
-      setCurrentWeather,
-      setLoading
-    );
-    getExtendedWeather(
-      coords?.latitude,
-      coords?.longitude,
-      setExtendedWeather,
-      setLoading
-    );
+    if (coords) {
+      getCurrentWeather(
+        coords?.latitude,
+        coords?.longitude,
+        setCurrentWeather,
+        setLoading
+      );
+      getExtendedWeather(
+        coords?.latitude,
+        coords?.longitude,
+        setExtendedWeather,
+        setLoading
+      );
+    }
   }, [coords]);
 
   useEffect(() => {

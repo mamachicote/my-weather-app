@@ -16,7 +16,7 @@ import { ExpandMore } from '@mui/icons-material';
 const WeatherAccordeon = (props) => {
   const { data, loading } = props;
 
-  const isMobile = useMediaQuery((theme) => theme.breakpoints.up('sm'), {
+  const isMobile = useMediaQuery((theme) => theme?.breakpoints.up('sm'), {
     noSsr: true,
   });
 
@@ -160,8 +160,8 @@ WeatherAccordeon.defaultProps = {
 };
 
 WeatherAccordeon.propTypes = {
-  data: PropTypes.object.isRequired,
-  loading: PropTypes.bool.isRequired,
+  data: PropTypes.object,
+  loading: PropTypes.bool,
 };
 
 export default WeatherAccordeon;

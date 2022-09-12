@@ -36,5 +36,9 @@ export  const CITIES_COORDS = {
     'Sao Paulo': {
         latitude: -23.5475,
         longitude: -46.63611
+    },
+    'Buenos Aires': {
+        latitude: -34.61315,
+        longitude: -58.37723
     }
 }
