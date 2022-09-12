@@ -52,7 +52,11 @@ const App = () => {
   };
 
   useEffect(() => {
-    getLocation();
+    let baLat = -34.61315;
+    let baLon = -58.37723;
+
+    getCurrentWeather(baLat, baLon, setCurrentWeather, setLoading);
+    getExtendedWeather(baLat, baLon, setExtendedWeather, setLoading);
   }, []);
 
   useEffect(() => {

@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import { Card, MenuItem, Select, useMediaQuery } from '@mui/material';
 
 const CitySelect = (props) => {
+  // eslint-disable-next-line react/prop-types
   const { handleSelect, handleReset, options } = props;
 
   const isMobile = useMediaQuery((theme) => theme?.breakpoints.up('sm'), {
@@ -23,19 +24,20 @@ const CitySelect = (props) => {
     <Card className="city-select" sx={cardStyle}>
       <Select
         className="city-select__input"
-        defaultValue="Tu ubicación"
+        defaultValue="Buenos Aires"
         fullWidth
         onChange={(e) => handleSelect(e)}
         size="big"
       >
-        <MenuItem value="Tu ubicación" onClick={(e) => handleReset(e)}>
-          Tu ubicación
-        </MenuItem>
+        {/* eslint-disable-next-line react/prop-types */}
         {options?.map((opt, key) => (
           <MenuItem key={key} value={opt.label}>
             {opt.label}
           </MenuItem>
         ))}
+        <MenuItem value="Tu ubicación" onClick={(e) => handleReset(e)}>
+          Tu ubicación (Habilite el acceso a su ubicación)
+        </MenuItem>
       </Select>
     </Card>
   );

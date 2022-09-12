@@ -1,5 +1,8 @@
 export const CITIES = [
     {
+        label: 'Buenos Aires',
+    },
+    {
         label: 'Nueva York',
     },
     {
@@ -33,7 +36,7 @@ export  const CITIES_COORDS = {
         latitude: 51.50853,
         longitude: -0.12574
     },
-    'Sao Paulo': {
+    'São Paulo': {
         latitude: -23.5475,
         longitude: -46.63611
     },

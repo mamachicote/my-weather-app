@@ -6,6 +6,10 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 In the project directory, you can run:
 
+### `npm install`
+
+It is necessary to run this command for the correct installation of all the packages necessary to run the application.
+
 ### `npm start`
 
 Runs the app in the development mode.\
@@ -14,7 +18,8 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 ## Learn More
 This application was developed with React JS, Axios and Material UI.
 Separate components were created for the Selector, Weather Card and Weather Accordeon. Individualizing styles and responsibilities for greater code organization and readability.
-The project was developed with the idea that the first city to display is the user's current location. In case you do not accept the use of the location of the browser. You will have the option to select any of the 5 cities enabled in the selector.
+
+The user will have the possibility to select between several cities and also enable access to their browser location, they will be able to view their location data in real time.
 
 ## Folder Structure
 
