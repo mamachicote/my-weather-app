@@ -52,11 +52,21 @@ const App = () => {
   };
 
   useEffect(() => {
-    let baLat = -34.61315;
-    let baLon = -58.37723;
+    let firstChargeLat = -34.61315;
+    let firtsChargeLon = -58.37723;
 
-    getCurrentWeather(baLat, baLon, setCurrentWeather, setLoading);
-    getExtendedWeather(baLat, baLon, setExtendedWeather, setLoading);
+    getCurrentWeather(
+      firstChargeLat,
+      firtsChargeLon,
+      setCurrentWeather,
+      setLoading
+    );
+    getExtendedWeather(
+      firstChargeLat,
+      firtsChargeLon,
+      setExtendedWeather,
+      setLoading
+    );
   }, []);
 
   useEffect(() => {
@@ -75,12 +85,6 @@ const App = () => {
       );
     }
   }, [coords]);
-
-  useEffect(() => {
-    if (currentWeather && extendedWeather) {
-      setLoading(false);
-    }
-  }, [currentWeather, extendedWeather]);
 
   return (
     <ThemeProvider
